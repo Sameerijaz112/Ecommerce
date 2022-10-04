@@ -6,7 +6,8 @@ import { AdminModuleComponent } from './admin-module.component';
 import { DashboardComponent } from './adminComponent/dashboard/dashboard.component';
 import { ProductComponent } from './adminComponent/product/product.component';
 import { TestingComponentComponent } from './adminComponent/testing-component/testing-component.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from "@angular/forms";
+import {FormsModule  } from "@angular/forms";
 
 
 @NgModule({
@@ -15,12 +16,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     ProductComponent,
     TestingComponentComponent,
-  
     
+
   ],
   imports: [
     CommonModule,
-    AdminModuleRoutingModule
+    AdminModuleRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  
   ]
 })
 export class AdminModuleModule { }
