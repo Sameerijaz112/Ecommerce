@@ -10,7 +10,7 @@ const routes: Routes = [{ path: '', component: AdminModuleComponent,
 children:[
   {path:'admin-dashboard',component:DashboardComponent},
   {path:'testing-component',component:TestingComponentComponent },
-  {path:'products',component:ProductComponent}
+ {path: 'products',component:ProductComponent}
 ] }];
 
 @NgModule({
