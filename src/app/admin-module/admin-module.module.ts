@@ -18,13 +18,15 @@ import {FormsModule  } from "@angular/forms";
     TestingComponentComponent,
     
 
+    
+
   ],
   imports: [
     CommonModule,
     AdminModuleRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-  
+  ReactiveFormsModule
   ]
 })
 export class AdminModuleModule { }
