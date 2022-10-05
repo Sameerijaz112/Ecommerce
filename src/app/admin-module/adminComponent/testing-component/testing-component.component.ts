@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { TestingService } from 'src/app/shared/servies/testing.service';
 
 @Component({
   selector: 'app-testing-component',
@@ -8,7 +9,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 })
 export class TestingComponentComponent implements OnInit {
     myForm:FormGroup|any; //Model ko group kr k frontend k saat joorny k liyae 
-  constructor(private  formBuilder:FormBuilder) {
+  constructor(private  formBuilder:FormBuilder, private testingServies:TestingService) {
     this.myformmodel();
    }
 
@@ -22,6 +23,10 @@ export class TestingComponentComponent implements OnInit {
   }
   SubmitmyForm(){
     let FormValue = this.myForm.value;
+    this.testingServies.postmydatatobackend(FormValue).subscribe((responcfrombackend:any) => {
+      responcfrombackend;
+    } 
+    )
   }
 
 }

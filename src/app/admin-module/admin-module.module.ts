@@ -8,6 +8,8 @@ import { ProductComponent } from './adminComponent/product/product.component';
 import { TestingComponentComponent } from './adminComponent/testing-component/testing-component.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import {FormsModule  } from "@angular/forms";
+import { HttpClient } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -16,17 +18,15 @@ import {FormsModule  } from "@angular/forms";
     DashboardComponent,
     ProductComponent,
     TestingComponentComponent,
-    
-
-    
-
   ],
   imports: [
     CommonModule,
     AdminModuleRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+ 
+  
   ]
 })
 export class AdminModuleModule { }
