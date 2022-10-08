@@ -11,7 +11,7 @@ export class TestingService {
   return this.Httpclient.post('http://localhost:5555/formValue/formApi',payload)
   }
   getmydatatobackend(){
-    return
+    return this.Httpclient.get('http://localhost:5555/formValue//GetData')
   }
   updatemydatatobackend(){
     return

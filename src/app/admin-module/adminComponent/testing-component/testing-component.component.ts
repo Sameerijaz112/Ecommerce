@@ -8,9 +8,13 @@ import { TestingService } from 'src/app/shared/servies/testing.service';
   styleUrls: ['./testing-component.component.css']
 })
 export class TestingComponentComponent implements OnInit {
-    myForm:FormGroup|any; //Model ko group kr k frontend k saat joorny k liyae 
+  
+  Showdata:string='';
+  myForm:FormGroup|any; //Model ko group kr k frontend k saat joorny k liyae 
   constructor(private  formBuilder:FormBuilder, private testingServies:TestingService) {
+    
     this.myformmodel();
+
    }
 
   ngOnInit(): void {
@@ -20,6 +24,12 @@ export class TestingComponentComponent implements OnInit {
       email: new FormControl(''),//Aik Form ke input ko FormControl kehty hein
       password: new FormControl('')
     })
+  }
+  Getpostdata(){
+    
+   this.testingServies.getmydatatobackend().subscribe((responcfrombackend:any) => {
+    this.Showdata = responcfrombackend.Result;
+   })
   }
   SubmitmyForm(){
     let FormValue = this.myForm.value;
