@@ -1,1 +1,83 @@
-dweew
+<form [formGroup]="ProductForm" (ngSubmit)="formSubmit()">
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="" class="form-label">Product Name </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="productName">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="" class="form-label">Product Quantity</label>
+                    <input type="text" class="form-control" name="" id="" formControlName="productQuantity">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="" class="form-label">Product Price </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="productPrice">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="" class="form-label">Product Material</label>
+                    <input type="text" class="form-control" name="" id="" formControlName="productMaterial">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    formControlName="description" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Description</label>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="" class="form-label">Logo Material</label>
+                    <input type="text" class="form-control" formControlName="logoMaterial" name="" id="">
+                </div>
+            </div>
+
+            <div class="col-md-4 my-4">
+                <ng-container>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select size</option>
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                    <option value="3">Xlarge</option>
+                </select>
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="" class="form-label">Color</label>
+                    <input type="text" class="form-control" formControlName="color" name="" id="">
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <!-- <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                     Catagory
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton3">
+                        <li *ngFor="let data of categoryArray" formControlName="category" >  <a class="dropdown-item">{{data}}</a></li>                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary w-100">Submit</button>
+    </div>
+</form>
