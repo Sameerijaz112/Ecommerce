@@ -39,4 +39,9 @@
     border-radius: 5px;
     
 }
-
+.navbar-brand{
+    color: #ed5561;
+}
+span{
+    color: #2f2f41;
+}
