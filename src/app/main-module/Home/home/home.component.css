@@ -312,7 +312,9 @@ a:hover {
 }
 .over-hide {
   overflow: hidden;
+  background-image: linear-gradient( to right,#de6262,#ffb88c );
 
+ 
 }
 .size-22{
   font-size: 22px;
@@ -699,6 +701,7 @@ body{
   align-items: center;
   min-height: 100vh;
   background: #131313;
+  
 }
 
 .container-fluid{
@@ -883,15 +886,23 @@ body{
   
 }
 .display-3{
-  margin-left: 60rem;
+  text-align: center;
+  background-image: linear-gradient( to right,#de6262,#ffb88c );
+margin-top: 0.6rem;
   
 }
 .display-4{
-  margin-top: 5rem;
-  margin-left: 60rem;
+ 
+  text-align: center;
+  margin-top: 0.5rem;
+  background-image: linear-gradient( to right,#de6262,#ffb88c );
+
 
 }
 .col-md-4{
   margin-bottom: 15rem;
   background-color: #910606;
+  
+  
 }
+
