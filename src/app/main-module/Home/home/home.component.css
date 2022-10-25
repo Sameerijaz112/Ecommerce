@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display:wght@400;700&display=swap'); */
 
 .hero-section {
   width: 100%;
@@ -21,8 +21,9 @@
 
 p {
   font-size: .8725rem;
-  color: #C4CFDA;
+  color: #333333;
   line-height: 170%;
+  text-align: center;
 }
 
 .tag-line {
@@ -224,7 +225,7 @@ h3 {
     background-color: rgb(0, 0, 0);
   }
   
-  .card {
+  .one {
     margin: 30px auto;
     width: 300px;
     height: 300px;
@@ -899,10 +900,41 @@ margin-top: 0.6rem;
 
 
 }
-.col-md-4{
+.new{
   margin-bottom: 15rem;
   background-color: #910606;
   
   
 }
-
+.fa-truck{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  
+}
+.fa-shield-alt{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.fa-undo-alt{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.feature{
+  text-align: center;
+  background: #ffffff;
+  padding: 14px;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  transition: 2s all;
+}
+.deal-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+}
