@@ -29,6 +29,7 @@ p {
 .tag-line {
   color: #e7b9a5;
   text-transform: uppercase;
+  margin-top: 5rem;
 }
 
 .title {
@@ -937,4 +938,33 @@ margin-top: 0.6rem;
   background-attachment: fixed;
   height: 100vh;
   position: relative;
+}
+.back{
+  
+  height: 70vh;
+  background-image: url(../../../../assets/pat-taylor-12V36G17IbQ-unsplash.jpg);
+  background-position: center;
+  background-size: 70vh;
+  background-repeat: no-repeat;
+  color: rgb(130, 117, 117);
+  text-align: center;
+  text-overflow: initial;
+
+}
+.ok{
+  height: 70vh;
+  background-image: url(../../../../assets/jaelynn-castillo-xfNeB1stZ_0-unsplash.jpg);
+  background-position: center;
+  background-size: 70vh;
+  background-repeat: no-repeat;
+  font-style: italic;
+}
+.btn-primary{
+  margin-left: 20px;
+  margin-top: 463px;
+ 
+}
+.ohk{
+  margin-top: 400px;
+  margin-left: 300px;
 }
