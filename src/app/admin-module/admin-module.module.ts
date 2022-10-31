@@ -9,6 +9,7 @@ import { TestingComponentComponent } from './adminComponent/testing-component/te
 import { ReactiveFormsModule } from "@angular/forms";
 import {FormsModule  } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
+import { Testing2Component } from './adminComponent/testing2/testing2.component';
 
 
 
@@ -18,6 +19,7 @@ import { HttpClient } from '@angular/common/http';
     DashboardComponent,
     ProductComponent,
     TestingComponentComponent,
+    Testing2Component,
   ],
   imports: [
     CommonModule,
