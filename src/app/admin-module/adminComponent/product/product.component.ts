@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
@@ -8,13 +8,14 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  @ViewChild('FilesSelect') FileSelect: ElementRef | any
   color:any=["Red","Black","Blue"]
   selectSize:any=['small', 'medium' ,'large','xlarge'];
   categoryArray:any=['Men','Female']
   newSizeArray: any = [];
   imageArray: any = [];
   disableButtonTrue: boolean = false;
-  FileSelect: any;
+ 
   ProductForm:FormGroup|any 
   
 
@@ -42,7 +43,7 @@ getSize(event: any ){
 if (event.target.checked) {
   this.newSizeArray.push(event.target.value)
 } else {
-  this.newSizeArray = this,this.newSizeArray.filter((value:any) => ! event.target.value)
+  this.newSizeArray = this.newSizeArray.filter((value:any) => ! event.target.value)
 } 
 }
 
