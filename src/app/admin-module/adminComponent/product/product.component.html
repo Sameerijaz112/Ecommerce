@@ -46,35 +46,29 @@
                 </div>
             </div>
 
-            <div class="col-md-4 my-4">
-                <ng-container>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Select size</option>
-                    <option value="1">Small</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Large</option>
-                    <option value="3">Xlarge</option>
-                </select>
-                </ng-container>
-            </div>
+            
+          <label for="" class="tag">Select Size</label>
+          <div class="mb-3">
+            <ng-container *ngFor="let item of selectSize" >
+            <input type="checkbox" class="form-check-input" [value]="item" [id]="item" (click)="getSize($event)"/>
+            <label class="form-check-label mx-2" [for]="item">
+              {{item}}
+            </label>
+          </ng-container>
+          </div>
         </div>
 
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-3">
-                    <label for="" class="form-label">Color</label>
-                    <input type="text" class="form-control" formControlName="color" name="" id="">
-                </div>
+                    <label class="tag"> Select-Color </label>
+                  <select name="selectColor" class="form-control selectColor" id="" placeholder="selectColor" formControlName=" color">
+                    <option *ngFor="let item of color">{{item}}</option>
+                  </select>
+                </div> 
             </div>
             <div class="col-md-4 ">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                     Catagory
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton3">
-                        <li *ngFor="let data of categoryArray" formControlName="category" >  <a class="dropdown-item">{{data}}</a></li>                    </ul>
-                </div>
+            
             </div>
         </div>
 
