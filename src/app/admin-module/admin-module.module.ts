@@ -25,8 +25,7 @@ import { Testing2Component } from './adminComponent/testing2/testing2.component'
     CommonModule,
     AdminModuleRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
-  ReactiveFormsModule,
+    FormsModule
  
   
   ]
