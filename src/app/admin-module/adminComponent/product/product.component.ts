@@ -9,22 +9,16 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 })
 export class ProductComponent implements OnInit {
   @ViewChild('FilesSelect') FileSelect: ElementRef | any
-
   color:any=["Red","Black","Blue"]
   selectSize:any=['small', 'medium' ,'large','xlarge'];
   categoryArray:any=['Men','Female']
   newSizeArray: any = [];
   imageArray: any = [];
   disableButtonTrue: boolean = false;
- 
   ProductForm:FormGroup|any 
-  
-
-
   constructor(private formbuilder:FormBuilder) { 
     this.FormProductModel()
   }
-
   ngOnInit(): void {
   }
 FormProductModel(){
@@ -67,10 +61,20 @@ formSubmit(){
   this.ProductForm.get("size").push(formControl)
 
  });
+ let MultiPartFormData = new FormData();
+    MultiPartFormData.append('productname',this.ProductForm.get)
+    MultiPartFormData.append('quantity', this.ProductForm.get('quantity').value);
+    MultiPartFormData.append('price', this.myProductForm.get('price').value);
+    MultiPartFormData.append('description', this.myProductForm.get('description').value);
+    MultiPartFormData.append('color', this.myProductForm.get('color').value);
+    MultiPartFormData.append('companyName', this.myProductForm.get('companyName').value);
+    MultiPartFormData.append('category', this.myProductForm.get('category').value);
+    MultiPartFormData.append('size', this.myProductForm.get('size').value);
+    MultiPartFormData.append('productMaterial', this.myProductForm.get('productMaterial').value);
 }
+
 }
 /* MultipartformDAta */
-let MultiPartFormData = new FormData();
-MultiPartFormData.append('productName', this.);
+
 
 
