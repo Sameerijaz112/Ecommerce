@@ -68,10 +68,20 @@
                 </div> 
             </div>
             <div class="col-md-4 ">
-            
+                
+                    <label for="formFile" class="form-label tag">Select Images</label>
+                    <input #FileSelect class="form-control input" type="file" id="formFile"  multipl (change)="getimages($event)" >
+                  </div>
             </div>
-        </div>
+            <div class="col">
+                <label for="" class="tag mb-2">Select Categories</label>
+                <select class="form-select input" formControlName="category">
+                  <option *ngFor="let data of categoryArray" [value]="data">{{data}}</option>
+                </select>
+              </div>
+            </div>
+        
 
-        <button type="submit" class="btn btn-outline-primary w-100">Submit</button>
-    </div>
+        <button type="submit" class="btn btn-outline-primary w-100" [ngStyle]="{'border-color': disableButtonTrue ? 'red' : 'black'}"  [disabled]="disableButtonTrue">Submit</button>
+    
 </form>
