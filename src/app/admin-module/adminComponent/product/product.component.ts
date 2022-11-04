@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProductService } from 'src/app/shared/servies/product.service';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class ProductComponent implements OnInit {
   imageArray: any = [];
   disableButtonTrue: boolean = false;
   ProductForm:FormGroup|any 
-  constructor(private formbuilder:FormBuilder) { 
+  
+  constructor(private formbuilder:FormBuilder, private productservices:ProductService) { 
     this.FormProductModel()
   }
   ngOnInit(): void {
@@ -38,7 +40,7 @@ getSize(event: any ){
 if (event.target.checked) {
   this.newSizeArray.push(event.target.value)
 } else {
-  this.newSizeArray = this.newSizeArray.filter((value:any) => ! event.target.value)
+  this.newSizeArray = this.newSizeArray.filter((_value:any) => ! event.target.value)
 } 
 }
 
@@ -61,20 +63,25 @@ formSubmit(){
   this.ProductForm.get("size").push(formControl)
 
  });
+ /* MultipartformDAta */
  let MultiPartFormData = new FormData();
-    MultiPartFormData.append('productname',this.ProductForm.get)
-    MultiPartFormData.append('quantity', this.ProductForm.get('quantity').value);
-    MultiPartFormData.append('price', this.myProductForm.get('price').value);
-    MultiPartFormData.append('description', this.myProductForm.get('description').value);
-    MultiPartFormData.append('color', this.myProductForm.get('color').value);
-    MultiPartFormData.append('companyName', this.myProductForm.get('companyName').value);
-    MultiPartFormData.append('category', this.myProductForm.get('category').value);
-    MultiPartFormData.append('size', this.myProductForm.get('size').value);
-    MultiPartFormData.append('productMaterial', this.myProductForm.get('productMaterial').value);
+    MultiPartFormData.append(' productName',this.ProductForm.get(' productName').value)
+    MultiPartFormData.append('productQuantity', this.ProductForm.get('productQuantity').value);
+    MultiPartFormData.append('productPrice', this.ProductForm.get('productPrice').value);
+    MultiPartFormData.append('description', this.ProductForm.get('description').value);
+    MultiPartFormData.append('color', this.ProductForm.get('color').value);
+    MultiPartFormData.append('category', this.ProductForm.get('category').value);
+    MultiPartFormData.append('size', this.ProductForm.get('size').value);
+    MultiPartFormData.append('productMaterial', this.ProductForm.get('productMaterial').value);
+    this.imageArray.forEach((ImagesData: any) => {
+      MultiPartFormData.append('images', ImagesData);
+      this.productservices.
+      
+    });
 }
 
 }
-/* MultipartformDAta */
+
 
 
 
