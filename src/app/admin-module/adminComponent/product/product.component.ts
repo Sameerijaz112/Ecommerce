@@ -75,7 +75,7 @@ formSubmit(){
     MultiPartFormData.append('productMaterial', this.ProductForm.get('productMaterial').value);
     this.imageArray.forEach((ImagesData: any) => {
       MultiPartFormData.append('images', ImagesData);
-      this.productservices.
+      this.productservices
       
     });
 }
