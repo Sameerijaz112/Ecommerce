@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { Chart, ChartConfiguration, ChartData, ChartEvent, ChartType  } from 'chart.js';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -56,9 +58,10 @@ datasets:[
 ]
 };
 
-  constructor() { }
+  constructor(private _TostrServies:ToastrService) { }
 
   ngOnInit(): void {
+    this._TostrServies.success('Hello jee')
   }
 
 }
