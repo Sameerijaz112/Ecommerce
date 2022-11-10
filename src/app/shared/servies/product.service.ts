@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductService {
+  [x: string]: any;
 
   constructor() { }
 }

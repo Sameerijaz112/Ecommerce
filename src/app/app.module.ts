@@ -17,7 +17,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut:1000,
+      progressBar:true,
+      progressAnimation:'increasing',
+    }),
     BrowserAnimationsModule,
   ],
   providers: [],
