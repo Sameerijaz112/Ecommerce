@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from 'src/app/shared/servies/product.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class ProductComponent implements OnInit {
   disableButtonTrue: boolean = false;
   ProductForm:FormGroup|any 
   
-  constructor(private formbuilder:FormBuilder, private productservices:ProductService) { 
+  constructor(private formbuilder:FormBuilder, private productservices:ProductService, private Tostr:ToastrService) { 
     this.FormProductModel()
   }
   ngOnInit(): void {
@@ -78,9 +79,11 @@ formSubmit(){
       this.productservices
       
     });
-   this.productservices.subscribe((Responcefrombackend:any)=>{
-
-   })
+    this.productservices.CreatProductcard(MultiPartFormData).subscribe((ResponseComingFromBackend: any) => {
+      this.Tostr.success(ResponseComingFromBackend.Message);
+      this.ProductForm.reset();
+      this.FileSelect.nativeElement.value = null;
+    })
 }
  
 }
