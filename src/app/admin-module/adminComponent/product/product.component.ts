@@ -80,7 +80,11 @@ formSubmit(){
       
     });
     this.productservices.CreatProductcard(MultiPartFormData).subscribe((ResponseComingFromBackend: any) => {
-      this.Tostr.success(ResponseComingFromBackend.Message);
+     if (ResponseComingFromBackend.Data === true) {
+      this.Tostr.success(ResponseComingFromBackend.Message)
+     } else {
+      this.Tostr.error(ResponseComingFromBackend.Message)
+     }
       this.ProductForm.reset();
       this.FileSelect.nativeElement.value = null;
     })
