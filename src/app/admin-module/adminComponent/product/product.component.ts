@@ -18,11 +18,16 @@ export class ProductComponent implements OnInit {
   imageArray: any = [];
   disableButtonTrue: boolean = false;
   ProductForm:FormGroup|any 
+  Url='http://localhost:8888/'
+  Allproducts:any=[]
   
   constructor(private formbuilder:FormBuilder, private productservices:ProductService, private Tostr:ToastrService) { 
     this.FormProductModel()
   }
   ngOnInit(): void {
+    this.productservices.GetAllproduct().subscribe((ResponseComingFromBackend:any)=>{
+      this.Allproducts= ResponseComingFromBackend.Result;
+    })
   }
 FormProductModel(){
   this.ProductForm=this.formbuilder.group({
