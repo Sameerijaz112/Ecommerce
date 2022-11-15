@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import {FormsModule  } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
 import { Testing2Component } from './adminComponent/testing2/testing2.component';
+import { ProductAnalytisComponent } from './adminComponent/product-analytis/product-analytis.component';
 
 
 
@@ -20,13 +21,15 @@ import { Testing2Component } from './adminComponent/testing2/testing2.component'
     ProductComponent,
     TestingComponentComponent,
     Testing2Component,
+    ProductAnalytisComponent,
   ],
   imports: [
     CommonModule,
     AdminModuleRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    NgChartsModule
+    NgChartsModule,
+    
  
   
   ]

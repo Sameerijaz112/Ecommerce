@@ -1,0 +1,31 @@
+<div class="container my-5">
+    <h1>Welcome To Products Analytics</h1>
+    <table class="table table-hover table-sm table-striped">
+        <thead>
+          <tr>
+            <th class="text-center">#</th>
+            <th class="text-center">Product Name</th>
+            <th class="text-center">Prduct Image</th>
+            <th class="text-center">Price</th>
+            <th class="text-center">Status</th>
+            <th class="text-center">Status Summary</th>
+            <th class="text-center">Company Name</th>
+            <th colspan="2" class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of productArray; let i=index">
+            <th class="text-center">{{i+1}}</th>
+            <td class="text-center">{{data.productName}}</td>
+            <td class="text-center"><img [src]="Url+data.imageDetaisl[0].ImageUrl" [alt]="data.productName" class="rounded-circle"></td>
+            <td class="text-center">{{data.price}}</td>
+            <td class="text-center" [ngClass]="data.status === 1 ? 'text-primary' : 'text-danger'">{{data.status}}</td>
+            <td class="text-center" [ngClass]="data.status === 1 ? 'text-primary' : 'text-danger'">{{data.status === 1 ? 'In Stock':'Out of Stock'}}</td>
+            <td class="text-center">{{data.companyName}}</td>
+            <td class="text-center"><i class="fas fa-eye text-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getParticularData(data._id)"></i></td>
+            <td class="text-center"><button class="btn btn-outline-danger" (click)="deleteProduct(data._id)">delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
