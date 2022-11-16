@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/shared/servies/product.service';
 
 @Component({
   selector: 'app-product',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
-  constructor() { }
+  Url='http://localhost:8888/'
+  AllProducts:any = [];
+data: any;
+  constructor(private ProductServies:ProductService) { }
 
   ngOnInit(): void {
+    this.ProductServies.GetAllproduct().subscribe((ResponseComingFromBackEnd:any) => {
+      this.AllProducts = ResponseComingFromBackEnd.Result;
+    })
+  
   }
 
 }

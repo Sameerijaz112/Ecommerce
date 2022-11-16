@@ -50,7 +50,7 @@
           <label for="" class="tag">Select Size</label>
           <div class="mb-3">
             <ng-container *ngFor="let item of selectSize" >
-            <input type="checkbox" class="form-check-input" [value]="item" [id]="item" (click)="getSize($event)"/>
+            <input type="checkbox" class="form-check-input"[name]="item" [value]="item" [id]="item" (click)="getSize($event)"/>
             <label class="form-check-label mx-2" [for]="item">
               {{item}}
             </label>
@@ -83,12 +83,5 @@
         
 
         <button type="submit" class="btn btn-outline-primary w-100" [ngStyle]="{'border-color': disableButtonTrue ? 'red' : 'black'}"  [disabled]="disableButtonTrue">Submit</button>
-        <div class="container my-5">
-          <div class="row">
-            <div class="col" *ngFor="let data of Allproducts ">
-                <div class="card" style="width: 18rem;">
-                <img [src]="Url+data.imageDetails[0].imageUrl" alt=""></div>
-            </div>
-          </div>
-        </div>
+        
 </form>

@@ -14,4 +14,10 @@ export class ProductService {
   GetAllproduct(){
     return this.Httpclient.get('http://localhost:8888/ProductManagement/Getproduct')
   }
+  GetProductById(_id:any){
+    return this.Httpclient.get(`http://localhost:8888/ProductManagement/GetProductById/${_id}`)
+  }
+  DeleteProductById(_id:any){
+    return this.Httpclient.delete(`http://localhost:8888/ProductManagement/DeleteProductById/${_id}`);
+  }
 }
