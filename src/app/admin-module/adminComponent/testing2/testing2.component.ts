@@ -15,4 +15,9 @@ export class Testing2Component implements OnInit {
   this.Changebuttoncolor= !this.Changebuttoncolor
   
   }
+  test(){
+    console.warn("ok its Done")
+  }
+  
+  
 }
