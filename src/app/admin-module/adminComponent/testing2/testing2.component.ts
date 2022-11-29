@@ -18,7 +18,9 @@ export class Testing2Component implements OnInit {
   }
   test(){
 this.ChangeColorProperty = !this.ChangeColorProperty
-   
+   const a = ['Car','Bike',]
+   let x = a;
+   console.log(a)
   }
   
   
