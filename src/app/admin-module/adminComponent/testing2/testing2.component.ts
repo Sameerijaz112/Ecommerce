@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Testing2Component implements OnInit {
   Changebuttoncolor:Boolean = false
+  ChangeColorProperty:Boolean = false
   constructor() { }
 
   ngOnInit(): void {
@@ -16,7 +17,8 @@ export class Testing2Component implements OnInit {
   
   }
   test(){
-    console.warn("ok its Done")
+this.ChangeColorProperty = !this.ChangeColorProperty
+   
   }
   
   
