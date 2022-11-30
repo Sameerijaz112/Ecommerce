@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class Testing2Component implements OnInit {
   Changebuttoncolor:Boolean = false
   ChangeColorProperty:Boolean = false
+  color: Boolean = false
+  Practice : Boolean = false
   constructor() { }
 
   ngOnInit(): void {
@@ -20,8 +22,17 @@ export class Testing2Component implements OnInit {
 this.ChangeColorProperty = !this.ChangeColorProperty
    const a = ['Car','Bike',]
    let x = a;
-   console.log(a)
+   console.log(x)
   }
   
+  test2(){
+    this.color = !this.color
+
+  }
+
+
+  Practice1(){
+    this.Practice=!this.Practice
+  }
   
 }
